@@ -78,7 +78,6 @@ multiply(4, 3, function(answer){
 
 
 
-  //Code Here for contains
 var contains = function(arr, str, cb) {
   for (var i = 0; i < arr.length-1; i++) {
     if (arr[i] === str) {
@@ -104,9 +103,18 @@ contains(names, 'Colt', function(result){
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
 
-
+//***************** WHY DOES === -1 ON LINE 112 GET RID OF THE DUPLICATE? *******************
 
     //Code Here for uniq
+var uniq = function(arr, cb) {
+  var newArr = [];
+  for (var i in arr) {
+    if (newArr.indexOf(arr[i]) === -1) {
+      newArr.push(arr[i]);
+    };
+  };
+  cb(newArr);
+};
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 uniq(names, function(uniqArr){
