@@ -60,7 +60,9 @@ last(names, function(lastName){
 
 
 
-  //Code Here for multiply
+var multiply = function(num1, num2) {
+  return (num1 * num2);
+}
 
 multiply(4, 3, function(answer){
   console.log('The answer is ', answer); //should console.log 12
