@@ -157,6 +157,14 @@ each(names, function(item, indice){
 
  //code here for getUserById
 
+var getUserById = function(arr, obj, cb) {
+  for (var i = 0; i < arr.length; i++) {
+    if (obj === arr[i].id) {
+      cb(arr[i]);
+    };
+  };
+};
+
 var users = [
   {
     id: '12d',
@@ -175,7 +183,7 @@ var users = [
     email: 'ryan@gmail.com',
     name: 'Ryan',
     address: '192 East 32 North'
-  },
+  }
 ];
 
 getUserById(users, '16t', function(user){
