@@ -24,8 +24,6 @@ and what you should write is the favNum function that makes the code above work,
 
 
 
-  //Code Here for first
-
 var first = function(arr, cb) {
   cb(arr[0]);
 }
@@ -42,7 +40,9 @@ first(names, function(firstName){
 
 
 
-  //Code Here for last
+var last = function(arr, cb) {
+  cb(arr[arr.length-1])
+}
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 last(names, function(lastName){
